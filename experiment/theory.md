@@ -48,7 +48,8 @@ The drag-cup rotor can be described as a special from of squirral-cage rotor in 
 <img alt="" src="./images/eq1.png" style="width:400px;height:300px;">
 </div>	
 
- Let  us  choose ($ \dot{\theta}_0,E_0 $) be the operating point of the ac motor and consequently expanding \ the \ function f(……) about this point we have 
+ $$ Let \ us \ choose (\dot{\theta}_0,E_0) \ be \ the \ operating \ point \ of \ the \ ac \ motor \ and \ consequently \ expanding \ the \ function \ f(……) \ about \ this \ point \ we \ have $$
+
 
 
 $$ T_{m}=T_{m0}+\frac{\partial{T_{m}}}{\partial{E}}\vert\dot{\theta}_{0}E_{0}(E-E_{0})+\frac{\partial{T_{m}}}{\partial{\dot{\theta}}}\vert\dot{\theta}_{0}E_{0}(\dot{\theta}-\dot{\theta}_{0}).......(1) $$   
@@ -59,7 +60,7 @@ J =	movement of inertia of rotor and disc
 
 F 	=	coefficient of viscous friction
 
-$ T_{L} $	= 	load torque
+$T_{L}$ 	= 	load torque 
 
 $$ K = \frac{\partial{T_{m}}}{\partial{E}}\vert\dot{\theta}_{0}E_{0}\dot{\theta} $$
 
@@ -85,6 +86,6 @@ where,
 
 $$ K_{m}=\frac{K}{f+f_{0}}, T_{m}= \frac{J}{f+f_{0}} $$
 
-$ k_{m} $ = DC gain of the system , $ T_{m} $= Motor Time Constant	
+$$ k_{m}  = DC\ gain\ of\ the\ system ,\  T_{m} = Motor\ Time\ Constant $$	
 						
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>								

@@ -322,6 +322,183 @@ function rotate1(){
 	
    document.getElementById('dcc').stepDown(1);
    
+    ///////////////////////////////////////////////////////////////////mass balance code through current knob//////////////////////////////////////////////////////////////////////
+   if(document.getElementById('dcc').value == 0.2 && document.getElementById('Tmassv').value == 20 && document.getElementById('conph').value == 220){
+	   
+	   document.getElementById('dcv').value = 1.5;
+	   document.getElementById('waterlevel').style.left = '51%';
+   }
+   if(document.getElementById('dcc').value == 0.4 && document.getElementById('Tmassv').value == 20 && document.getElementById('conph').value == 200){
+	   
+	   document.getElementById('dcv').value = 2.0;
+	   document.getElementById('waterlevel').style.left = '51%';
+   }
+   if(document.getElementById('dcc').value == 0.4 && document.getElementById('Tmassv').value == 20 && document.getElementById('conph').value == 180){
+	   
+	   document.getElementById('dcv').value = 1.8;
+	   document.getElementById('waterlevel').style.left = '51%';
+   }
+   
+   
+   if(document.getElementById('dcc').value == 0.5 && document.getElementById('Tmassv').value == 40 && document.getElementById('conph').value == 220){
+	   
+	   document.getElementById('dcv').value = 3.5;
+	   document.getElementById('waterlevel').style.left = '51%';
+   }
+   if(document.getElementById('dcc').value == 0.6 && document.getElementById('Tmassv').value == 40 && document.getElementById('conph').value == 200){
+	   
+	   document.getElementById('dcv').value = 2.9;
+	   document.getElementById('waterlevel').style.left = '51%';
+   }
+   if(document.getElementById('dcc').value == 0.6 && document.getElementById('Tmassv').value == 40 && document.getElementById('conph').value == 180){
+	   
+	   document.getElementById('dcv').value = 2.8;
+	   document.getElementById('waterlevel').style.left = '51%';
+   }
+   
+   
+   if(document.getElementById('dcc').value == 0.7 && document.getElementById('Tmassv').value == 50 && document.getElementById('conph').value == 220){
+	   
+	   document.getElementById('dcv').value = 4.5;
+	   document.getElementById('waterlevel').style.left = '51%';
+   }
+   if(document.getElementById('dcc').value == 0.7 && document.getElementById('Tmassv').value == 50 && document.getElementById('conph').value == 200){
+	   
+	   document.getElementById('dcv').value = 3.6;
+	   document.getElementById('waterlevel').style.left = '51%';
+   }
+   if(document.getElementById('dcc').value == 0.8 && document.getElementById('Tmassv').value == 50 && document.getElementById('conph').value == 180){
+	   
+	   document.getElementById('dcv').value = 4.0;
+	   document.getElementById('waterlevel').style.left = '51%';
+   }
+   
+   
+   if(document.getElementById('dcc').value == 0.8 && document.getElementById('Tmassv').value == 70 && document.getElementById('conph').value == 220){
+	   
+	   document.getElementById('dcv').value = 4.5;
+	   document.getElementById('waterlevel').style.left = '51%';
+   }
+   if(document.getElementById('dcc').value == 0.9 && document.getElementById('Tmassv').value == 70 && document.getElementById('conph').value == 200){
+	   
+	   document.getElementById('dcv').value = 4.5;
+	   document.getElementById('waterlevel').style.left = '51%';
+   }
+   if(document.getElementById('dcc').value == 0.9 && document.getElementById('Tmassv').value == 70 && document.getElementById('conph').value == 180){
+	   
+	   document.getElementById('dcv').value = 4.3;
+	   document.getElementById('waterlevel').style.left = '51%';
+   }
+   
+   
+   
+   if(document.getElementById('dcc').value == 1.0 && document.getElementById('Tmassv').value == 100 && document.getElementById('conph').value == 220){
+	   
+	   document.getElementById('dcv').value = 5.0;
+	   document.getElementById('waterlevel').style.left = '51%';
+   }
+   if(document.getElementById('dcc').value == 1.1 && document.getElementById('Tmassv').value == 100 && document.getElementById('conph').value == 200){
+	   
+	   document.getElementById('dcv').value = 5.3;
+	   document.getElementById('waterlevel').style.left = '51%';
+   }
+   if(document.getElementById('dcc').value == 1.1 && document.getElementById('Tmassv').value == 100 && document.getElementById('conph').value == 180){
+	   
+	   document.getElementById('dcv').value = 5.3;
+	   document.getElementById('waterlevel').style.left = '51%';
+   }
+   
+   
+   if(document.getElementById('dcc').value == 1.2 && document.getElementById('Tmassv').value == 120 && document.getElementById('conph').value == 220){
+	   
+	   document.getElementById('dcv').value = 6.4;
+	   document.getElementById('waterlevel').style.left = '51%';
+   }
+   if(document.getElementById('dcc').value == 1.2 && document.getElementById('Tmassv').value == 120 && document.getElementById('conph').value == 200){
+	   
+	   document.getElementById('dcv').value = 6.1;
+	   document.getElementById('waterlevel').style.left = '51%';
+   }
+   if(document.getElementById('dcc').value == 1.2 && document.getElementById('Tmassv').value == 120 && document.getElementById('conph').value == 180){
+	   
+	   document.getElementById('dcv').value = 6.0;
+	   document.getElementById('waterlevel').style.left = '51%';
+   }
+   
+   
+   if(document.getElementById('dcc').value == 1.3 && document.getElementById('Tmassv').value == 140 && document.getElementById('conph').value == 220){
+	   
+	   document.getElementById('dcv').value = 7.1;
+	   document.getElementById('waterlevel').style.left = '51%';
+   }
+   if(document.getElementById('dcc').value == 1.3 && document.getElementById('Tmassv').value == 140 && document.getElementById('conph').value == 200){
+	   
+	   document.getElementById('dcv').value = 6.8;
+	   document.getElementById('waterlevel').style.left = '51%';
+   }
+   if(document.getElementById('dcc').value == 1.3 && document.getElementById('Tmassv').value == 140 && document.getElementById('conph').value == 180){
+	   
+	   document.getElementById('dcv').value = 6.8;
+	   document.getElementById('waterlevel').style.left = '51%';
+   }
+   
+   
+   if(document.getElementById('dcc').value == 1.4 && document.getElementById('Tmassv').value == 160 && document.getElementById('conph').value == 220){
+	   
+	   document.getElementById('dcv').value = 7.7;
+	   document.getElementById('waterlevel').style.left = '51%';
+   }
+   if(document.getElementById('dcc').value == 1.5 && document.getElementById('Tmassv').value == 160 && document.getElementById('conph').value == 200){
+	   
+	   document.getElementById('dcv').value = 7.6;
+	   document.getElementById('waterlevel').style.left = '51%';
+   }
+   if(document.getElementById('dcc').value == 1.6 && document.getElementById('Tmassv').value == 160 && document.getElementById('conph').value == 180){
+	   
+	   document.getElementById('dcv').value = 7.8;
+	   document.getElementById('waterlevel').style.left = '51%';
+   }
+   
+   
+   if(document.getElementById('dcc').value == 1.7 && document.getElementById('Tmassv').value == 180 && document.getElementById('conph').value == 220){
+	   
+	   document.getElementById('dcv').value = 8.6;
+	   document.getElementById('waterlevel').style.left = '51%';
+   }
+   if(document.getElementById('dcc').value == 1.7 && document.getElementById('Tmassv').value == 180 && document.getElementById('conph').value == 200){
+	   
+	   document.getElementById('dcv').value = 8.7;
+	   document.getElementById('waterlevel').style.left = '51%';
+   }
+   if(document.getElementById('dcc').value == 1.8 && document.getElementById('Tmassv').value == 180 && document.getElementById('conph').value == 180){
+	   
+	   document.getElementById('dcv').value = 8.7;
+	   document.getElementById('waterlevel').style.left = '51%';
+   }
+   
+   
+   if(document.getElementById('dcc').value == 1.8 && document.getElementById('Tmassv').value == 200 && document.getElementById('conph').value == 220){
+	   
+	   document.getElementById('dcv').value = 8.6;
+	   document.getElementById('waterlevel').style.left = '51%';
+   }
+   if(document.getElementById('dcc').value == 1.9 && document.getElementById('Tmassv').value == 200 && document.getElementById('conph').value == 200){
+	   
+	   document.getElementById('dcv').value = 9.5;
+	   document.getElementById('waterlevel').style.left = '51%';
+   }
+   if(document.getElementById('dcc').value == 2.1 && document.getElementById('Tmassv').value == 200 && document.getElementById('conph').value == 180){
+	   
+	   document.getElementById('dcv').value = 10.5;
+	   document.getElementById('waterlevel').style.left = '51%';
+   }
+   
+    if(document.getElementById('dcc').value == 0 ){
+	   
+	   document.getElementById('dcv').value = 0;
+	   document.getElementById('waterlevel').style.left = '51%';
+   }
+   
    if(deg<0 ){
 	alert('This is the lowest value, can not rotate knob') ;  
 	knob3.style.transform=null; 
@@ -1271,6 +1448,7 @@ table3();
 	if(rowCount <= 2){
 		alert("There is no row available to delete!");
 		return;
+		
 	} 
 	else{
 		//delete last row
@@ -1286,6 +1464,7 @@ table3();
 	if(rowCount <= 2){
 		alert("There is no row available to delete!");
 		return;
+		
 	} 
 	else{
 		//delete last row
@@ -1301,6 +1480,7 @@ table3();
 	if(rowCount <= 2){
 		alert("There is no row available to delete!");
 		return;
+		
 	} 
 	else{
 		//delete last row

@@ -487,7 +487,7 @@ function rotate1(){
 	   document.getElementById('dcv').value = 9.5;
 	   document.getElementById('waterlevel').style.left = '51%';
    }
-   if(document.getElementById('dcc').value == 2.1 && document.getElementById('Tmassv').value == 200 && document.getElementById('conph').value == 180){
+   if(document.getElementById('dcc').value == 2 && document.getElementById('Tmassv').value == 200 && document.getElementById('conph').value == 180){
 	   
 	   document.getElementById('dcv').value = 10.5;
 	   document.getElementById('waterlevel').style.left = '51%';
@@ -618,11 +618,11 @@ function rotateSwheel() {
 }   
     
    
- function incrspeed(){
+ /*function incrspeed(){
 	var wheel = document.getElementById("swheel");
 	wheel.style["-webkit-animation-duration"] ="0.5s"; 
 	 
- }
+ }*/
  
  /*function rotateBwheel() {
    var wheel = document.getElementById("bwheel");
@@ -753,14 +753,14 @@ function drop(ev) {
  
  else if(data == "w10"  && ev.target.id =="dragDiv"){
 	  //green();
-	document.getElementById("mplate").style.top = '9%';
-    document.getElementById("dropDiv").style.top ='35%';
+	//document.getElementById("mplate").style.top = '9%';
+    //document.getElementById("dropDiv").style.top ='35%';
 	document.getElementById("w10").style.top ='12%';
-	document.getElementById("w220").style.top ='0%';
+	/*document.getElementById("w220").style.top ='0%';
 	document.getElementById("w120").style.top ='0%';
 	document.getElementById("w100").style.top ='0%';
-	document.getElementById("w50").style.top ='0%';
-	document.getElementById("waterlevel").style.left ='51%';	
+	document.getElementById("w50").style.top ='0%';*/
+	//document.getElementById("waterlevel").style.left ='51%';	
 		
 	 Tmassv1 = 0;	
 	
@@ -787,14 +787,14 @@ function drop(ev) {
  
  else if(data == "w220"  && ev.target.id =="dragDiv"){
 	  //green();
-	document.getElementById("mplate").style.top = '9%';
+	/*document.getElementById("mplate").style.top = '9%';
     document.getElementById("dropDiv").style.top ='35%';
-	document.getElementById("w10").style.top ='12%';
+	document.getElementById("w10").style.top ='12%';*/
 	document.getElementById("w220").style.top ='0%';
-	document.getElementById("w120").style.top ='0%';
+	/*document.getElementById("w120").style.top ='0%';
 	document.getElementById("w100").style.top ='0%';
 	document.getElementById("w50").style.top ='0%';
-	document.getElementById("waterlevel").style.left ='51%';	
+	document.getElementById("waterlevel").style.left ='51%';*/	
 		
 	 Tmassv2 = 0;	
 	
@@ -818,14 +818,14 @@ function drop(ev) {
 
 else if(data == "w120"  && ev.target.id =="dragDiv"){
 	  //green();
-	document.getElementById("mplate").style.top = '9%';
+	/*document.getElementById("mplate").style.top = '9%';
     document.getElementById("dropDiv").style.top ='35%';
 	document.getElementById("w10").style.top ='12%';
-	document.getElementById("w220").style.top ='0%';
+	document.getElementById("w220").style.top ='0%';*/
 	document.getElementById("w120").style.top ='0%';
-	document.getElementById("w100").style.top ='0%';
+	/*document.getElementById("w100").style.top ='0%';
 	document.getElementById("w50").style.top ='0%';
-	document.getElementById("waterlevel").style.left ='51%';	
+	document.getElementById("waterlevel").style.left ='51%';*/	
 		
 	 Tmassv3 = 0;	
 	
@@ -851,14 +851,14 @@ else if(data == "w120"  && ev.target.id =="dragDiv"){
  
  else if(data == "w50"  && ev.target.id =="dragDiv"){
 	  //green();
-	document.getElementById("mplate").style.top = '9%';
+	/*document.getElementById("mplate").style.top = '9%';
     document.getElementById("dropDiv").style.top ='35%';
 	document.getElementById("w10").style.top ='12%';
 	document.getElementById("w220").style.top ='0%';
 	document.getElementById("w120").style.top ='0%';
-	document.getElementById("w100").style.top ='0%';
+	document.getElementById("w100").style.top ='0%';*/
 	document.getElementById("w50").style.top ='0%';
-	document.getElementById("waterlevel").style.left ='51%';	
+	//document.getElementById("waterlevel").style.left ='51%';	
 		
 	 Tmassv4 = 0;	
 	
@@ -883,14 +883,14 @@ else if(data == "w120"  && ev.target.id =="dragDiv"){
  
 else if(data == "w100"  && ev.target.id =="dragDiv"){
 	  //green();
-	document.getElementById("mplate").style.top = '9%';
+	/*document.getElementById("mplate").style.top = '9%';
     document.getElementById("dropDiv").style.top ='35%';
 	document.getElementById("w10").style.top ='12%';
 	document.getElementById("w220").style.top ='0%';
-	document.getElementById("w120").style.top ='0%';
+	document.getElementById("w120").style.top ='0%';*/
 	document.getElementById("w100").style.top ='0%';
-	document.getElementById("w50").style.top ='0%';
-	document.getElementById("waterlevel").style.left ='51%';	
+	//document.getElementById("w50").style.top ='0%';
+	//document.getElementById("waterlevel").style.left ='51%';	
 		
 	 Tmassv5 = 0;	
 	
@@ -901,11 +901,115 @@ else if(data == "w100"  && ev.target.id =="dragDiv"){
 } 
  
  document.getElementById('Tmassv').value = (Tmassv1+Tmassv2+Tmassv3+Tmassv4+Tmassv5) ;
+ /////new add weights or combination of weights///////////
  
+ if(document.getElementById('Tmassv').value==40){
+	 
+	document.getElementById("mplate").style.top = '10.2%';
+    document.getElementById("dropDiv").style.top ='36.2%';
+	document.getElementById("w120").style.top ='12.2%';
+	document.getElementById("w220").style.top ='12.2%';
+	// level indicator
+	document.getElementById("waterlevel").style.left ='51.7%'; 
+	 
+	 
+ }
+ if(document.getElementById('Tmassv').value==70){
+	 
+	document.getElementById("mplate").style.top = '10.7%';
+    document.getElementById("dropDiv").style.top ='36.7%';
+	document.getElementById("w50").style.top ='12.7%';
+	//document.getElementById("w220").style.top ='12.7%';
+	// level indicator
+	document.getElementById("waterlevel").style.left ='51.7%'; 
+	 
+	 
+ }
+ if(document.getElementById('Tmassv').value==120){
+	 
+	document.getElementById("mplate").style.top = '11.2%';
+    document.getElementById("dropDiv").style.top ='37.2%';
+	document.getElementById("w100").style.top ='13.2%';
+	//document.getElementById("w220").style.top ='13.2%';
+	// level indicator
+	document.getElementById("waterlevel").style.left ='51.8%'; 
+	 
+	 
+ }
+ if(document.getElementById('Tmassv').value==140){
+	 
+	document.getElementById("mplate").style.top = '11.3%';
+    document.getElementById("dropDiv").style.top ='37.3%';
+	document.getElementById("w100").style.top ='13.3%';
+	document.getElementById("w220").style.top ='13.3%';
+	document.getElementById("w120").style.top ='13.3%';
+	// level indicator
+	document.getElementById("waterlevel").style.left ='51.8%';
+	 
+	 
+ }
+ if(document.getElementById('Tmassv').value==160){
+	 
+	document.getElementById("mplate").style.top = '11.4%';
+    document.getElementById("dropDiv").style.top ='37.4%';
+	document.getElementById("w100").style.top ='13.4%';
+	document.getElementById("w50").style.top ='13.4%';
+	document.getElementById("w10").style.top ='30%';
+	// level indicator
+	document.getElementById("waterlevel").style.left ='51.9%';
+	 
+	 
+ }
+ if(document.getElementById('Tmassv').value==180){
+	 
+	document.getElementById("mplate").style.top = '11.5%';
+    document.getElementById("dropDiv").style.top ='37.5%';
+	document.getElementById("w100").style.top ='13.5%';
+	document.getElementById("w50").style.top ='13.5%';
+	document.getElementById("w10").style.top ='30%';
+	document.getElementById("w220").style.top ='14.3%';
+	// level indicator
+	document.getElementById("waterlevel").style.left ='51.8%';
+	 
+	 
+ }
+ if(document.getElementById('Tmassv').value==200){
+	 
+	document.getElementById("mplate").style.top = '11.8%';
+    document.getElementById("dropDiv").style.top ='37.8%';
+	document.getElementById("w100").style.top ='13.8%';
+	document.getElementById("w50").style.top ='13.8%';
+	document.getElementById("w10").style.top ='30%';
+	document.getElementById("w220").style.top ='14.5%';
+	document.getElementById("w120").style.top ='14.5%';
+	// level indicator
+	document.getElementById("waterlevel").style.left ='51.8%';
+	 
+	 
+ }
  
+ if(document.getElementById('Tmassv').value==0){
+	 
+	document.getElementById("mplate").style.top = '9%';
+    document.getElementById("dropDiv").style.top ='35%';
+	document.getElementById("w100").style.top ='0%';
+	document.getElementById("w50").style.top ='0%';
+	document.getElementById("w10").style.top ='12%';
+	document.getElementById("w220").style.top ='0%';
+	document.getElementById("w120").style.top ='0%';
+	// level indicator
+	document.getElementById("waterlevel").style.left ='51%';
+	 
+	 
+ } 
+ 
+ /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
  if(document.getElementById('Tmassv').value == 20 && document.getElementById('conph').value == 220 ){//Ec=220v
 	
-	 
+	var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="0.6s";
+	wheel2.style["-webkit-animation-duration"] ="0.6s"; 
 	setTimeout(function(){
 		
 	document.getElementById('speed').value = '1005';
@@ -914,7 +1018,10 @@ else if(data == "w100"  && ev.target.id =="dragDiv"){
  }
  if(document.getElementById('Tmassv').value == 20 && document.getElementById('conph').value == 200 ){//Ec=200v
  
-		
+	var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="0.6s";
+	wheel2.style["-webkit-animation-duration"] ="0.6s";
 	 
 	setTimeout(function(){
 		
@@ -923,7 +1030,10 @@ else if(data == "w100"  && ev.target.id =="dragDiv"){
 	 
  }
  if(document.getElementById('Tmassv').value == 20 && document.getElementById('conph').value == 180 ){//Ec=180v
- 
+    var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="0.6s";
+	wheel2.style["-webkit-animation-duration"] ="0.6s";
 	setTimeout(function(){
 		
 	document.getElementById('speed').value = '976';
@@ -935,7 +1045,10 @@ else if(data == "w100"  && ev.target.id =="dragDiv"){
  
  if(document.getElementById('Tmassv').value == 40 && document.getElementById('conph').value == 220){//Ec=220v
  
-   
+    var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="0.7s";
+	wheel2.style["-webkit-animation-duration"] ="0.7s";
 	setTimeout(function(){
 		
 	document.getElementById('speed').value = '972';
@@ -944,6 +1057,10 @@ else if(data == "w100"  && ev.target.id =="dragDiv"){
  }
  if(document.getElementById('Tmassv').value == 40 && document.getElementById('conph').value == 200){//Ec=200v
  
+    var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="0.7s";
+	wheel2.style["-webkit-animation-duration"] ="0.7s";
 	 
 	setTimeout(function(){
 		
@@ -953,6 +1070,10 @@ else if(data == "w100"  && ev.target.id =="dragDiv"){
  }
  if(document.getElementById('Tmassv').value == 40 && document.getElementById('conph').value == 180){//Ec=180v
  
+	var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="0.7s";
+	wheel2.style["-webkit-animation-duration"] ="0.7s";
 	setTimeout(function(){
 		
 	document.getElementById('speed').value = '942';
@@ -965,7 +1086,10 @@ else if(data == "w100"  && ev.target.id =="dragDiv"){
  
  if(document.getElementById('Tmassv').value == 50 && document.getElementById('conph').value == 220){//Ec=220v
  
-    
+    var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="0.8s";
+	wheel2.style["-webkit-animation-duration"] ="0.8s";
 	setTimeout(function(){
 		
 	document.getElementById('speed').value = '960';
@@ -974,6 +1098,10 @@ else if(data == "w100"  && ev.target.id =="dragDiv"){
  }
  if(document.getElementById('Tmassv').value == 50 && document.getElementById('conph').value == 200){//Ec=200v
  
+	var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="0.8s";
+	wheel2.style["-webkit-animation-duration"] ="0.8s";
 	setTimeout(function(){
 		
 	document.getElementById('speed').value = '945';
@@ -982,6 +1110,10 @@ else if(data == "w100"  && ev.target.id =="dragDiv"){
  }
  if(document.getElementById('Tmassv').value == 50 && document.getElementById('conph').value == 180){//Ec=180v
  
+	var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="0.8s";
+	wheel2.style["-webkit-animation-duration"] ="0.8s";
 	setTimeout(function(){
 		
 	document.getElementById('speed').value = '927';
@@ -993,6 +1125,11 @@ else if(data == "w100"  && ev.target.id =="dragDiv"){
  
 if(document.getElementById('Tmassv').value == 70 && document.getElementById('conph').value == 220){//Ec=220v
 
+	var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="0.9s";
+	wheel2.style["-webkit-animation-duration"] ="0.9s";
+
 	setTimeout(function(){
 		
 	document.getElementById('speed').value = '935';
@@ -1000,6 +1137,11 @@ if(document.getElementById('Tmassv').value == 70 && document.getElementById('con
 	 
  }
  if(document.getElementById('Tmassv').value == 70 && document.getElementById('conph').value == 200){//Ec=200v
+ 
+	var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="0.9s";
+	wheel2.style["-webkit-animation-duration"] ="0.9s";
  
 	setTimeout(function(){
 		
@@ -1009,6 +1151,10 @@ if(document.getElementById('Tmassv').value == 70 && document.getElementById('con
  }
  if(document.getElementById('Tmassv').value == 70 && document.getElementById('conph').value == 180){//Ec=180v
  
+	var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="0.9s";
+	wheel2.style["-webkit-animation-duration"] ="0.9s";
 	setTimeout(function(){
 		
 	document.getElementById('speed').value = '892';
@@ -1020,7 +1166,10 @@ if(document.getElementById('Tmassv').value == 70 && document.getElementById('con
  
  if(document.getElementById('Tmassv').value == 100 && document.getElementById('conph').value == 220){//Ec=220v
  
-    
+    var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="1s";
+	wheel2.style["-webkit-animation-duration"] ="1s";
 	setTimeout(function(){
 		
 	document.getElementById('speed').value = '896';
@@ -1029,6 +1178,11 @@ if(document.getElementById('Tmassv').value == 70 && document.getElementById('con
  }
  if(document.getElementById('Tmassv').value == 100 && document.getElementById('conph').value == 200){//Ec=200v
  
+	var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="1s";
+	wheel2.style["-webkit-animation-duration"] ="1s";
+ 
 	setTimeout(function(){
 		
 	document.getElementById('speed').value = '871';
@@ -1036,6 +1190,11 @@ if(document.getElementById('Tmassv').value == 70 && document.getElementById('con
 	 
  }
  if(document.getElementById('Tmassv').value == 100 && document.getElementById('conph').value == 180){//Ec=180v
+ 
+	var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="1s";
+	wheel2.style["-webkit-animation-duration"] ="1s";
  
 	setTimeout(function(){
 		
@@ -1048,6 +1207,11 @@ if(document.getElementById('Tmassv').value == 70 && document.getElementById('con
  
  if(document.getElementById('Tmassv').value == 120 && document.getElementById('conph').value == 220){//Ec=220v
  
+	var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="1.1s";
+	wheel2.style["-webkit-animation-duration"] ="1.1s";
+ 
 
 	setTimeout(function(){
 		
@@ -1057,6 +1221,11 @@ if(document.getElementById('Tmassv').value == 70 && document.getElementById('con
  }
  if(document.getElementById('Tmassv').value == 120 && document.getElementById('conph').value == 200){//Ec=200v
  
+	var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="1.1s";
+	wheel2.style["-webkit-animation-duration"] ="1.1s";
+ 
 	setTimeout(function(){
 		
 	document.getElementById('speed').value = '844';
@@ -1064,6 +1233,11 @@ if(document.getElementById('Tmassv').value == 70 && document.getElementById('con
 	 
  }
  if(document.getElementById('Tmassv').value == 120 && document.getElementById('conph').value == 180){//Ec=180v
+ 
+	var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="1.1s";
+	wheel2.style["-webkit-animation-duration"] ="1.1s";
  
 	setTimeout(function(){
 		
@@ -1076,6 +1250,10 @@ if(document.getElementById('Tmassv').value == 70 && document.getElementById('con
  
  if(document.getElementById('Tmassv').value == 140 && document.getElementById('conph').value == 220){//Ec=220v
  
+	var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="1.2s";
+	wheel2.style["-webkit-animation-duration"] ="1.2s";
 	setTimeout(function(){
 		
 	document.getElementById('speed').value = '837';
@@ -1084,6 +1262,10 @@ if(document.getElementById('Tmassv').value == 70 && document.getElementById('con
  }
  if(document.getElementById('Tmassv').value == 140 && document.getElementById('conph').value == 200){//Ec=200v
  
+	var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="1.2s";
+	wheel2.style["-webkit-animation-duration"] ="1.2s";
 	setTimeout(function(){
 		
 	document.getElementById('speed').value = '812';
@@ -1092,6 +1274,10 @@ if(document.getElementById('Tmassv').value == 70 && document.getElementById('con
  }
  if(document.getElementById('Tmassv').value == 140 && document.getElementById('conph').value == 180){//Ec=180v
  
+	var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="1.2s";
+	wheel2.style["-webkit-animation-duration"] ="1.2s";
 	setTimeout(function(){
 		
 	document.getElementById('speed').value = '773';
@@ -1103,6 +1289,10 @@ if(document.getElementById('Tmassv').value == 70 && document.getElementById('con
  
 if(document.getElementById('Tmassv').value == 160 && document.getElementById('conph').value == 220){//Ec=220v
 
+	var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="1.3s";
+	wheel2.style["-webkit-animation-duration"] ="1.3s";
 	setTimeout(function(){
 		
 	document.getElementById('speed').value = '810';
@@ -1111,6 +1301,10 @@ if(document.getElementById('Tmassv').value == 160 && document.getElementById('co
  }
  if(document.getElementById('Tmassv').value == 160 && document.getElementById('conph').value == 200){//Ec=200v
  
+	var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="1.3s";
+	wheel2.style["-webkit-animation-duration"] ="1.3s";
 	setTimeout(function(){
 		
 	document.getElementById('speed').value = '769';
@@ -1119,7 +1313,10 @@ if(document.getElementById('Tmassv').value == 160 && document.getElementById('co
  }
  if(document.getElementById('Tmassv').value == 160 && document.getElementById('conph').value == 180){//Ec=180v
  
-	 
+	var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="1.3s";
+	wheel2.style["-webkit-animation-duration"] ="1.3s"; 
 	setTimeout(function(){
 		
 	document.getElementById('speed').value = '735';
@@ -1132,7 +1329,10 @@ if(document.getElementById('Tmassv').value == 160 && document.getElementById('co
  
  if(document.getElementById('Tmassv').value == 180 && document.getElementById('conph').value == 220){//Ec=220v
  
-   
+    var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="1.4s";
+	wheel2.style["-webkit-animation-duration"] ="1.4s";
 	setTimeout(function(){
 		
 	document.getElementById('speed').value = '782';
@@ -1141,6 +1341,10 @@ if(document.getElementById('Tmassv').value == 160 && document.getElementById('co
  }
  if(document.getElementById('Tmassv').value == 180 && document.getElementById('conph').value == 200){//Ec=200v
  
+	var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="1.4s";
+	wheel2.style["-webkit-animation-duration"] ="1.4s";
 	setTimeout(function(){
 		
 	document.getElementById('speed').value = '738';
@@ -1148,6 +1352,11 @@ if(document.getElementById('Tmassv').value == 160 && document.getElementById('co
 	 
  }
  if(document.getElementById('Tmassv').value == 180 && document.getElementById('conph').value == 180){//Ec=180v
+ 
+	var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="1.4s";
+	wheel2.style["-webkit-animation-duration"] ="1.4s";
  
 	setTimeout(function(){
 		
@@ -1161,6 +1370,11 @@ if(document.getElementById('Tmassv').value == 160 && document.getElementById('co
  
  if(document.getElementById('Tmassv').value == 200 && document.getElementById('conph').value == 220){//Ec=220v
  
+	var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="1.5s";
+	wheel2.style["-webkit-animation-duration"] ="1.5s";
+ 
  
 	setTimeout(function(){
 		
@@ -1170,6 +1384,10 @@ if(document.getElementById('Tmassv').value == 160 && document.getElementById('co
  }
   if(document.getElementById('Tmassv').value == 200 && document.getElementById('conph').value == 200){//Ec=200v
   
+	var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="1.5s";
+	wheel2.style["-webkit-animation-duration"] ="1.5s";
 	setTimeout(function(){
 		
 	document.getElementById('speed').value = '701';
@@ -1178,6 +1396,10 @@ if(document.getElementById('Tmassv').value == 160 && document.getElementById('co
  }
   if(document.getElementById('Tmassv').value == 200 && document.getElementById('conph').value == 180){//Ec=180v
   
+	var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="1.5s";
+	wheel2.style["-webkit-animation-duration"] ="1.5s";
 	setTimeout(function(){
 		
 	document.getElementById('speed').value = '668';
@@ -1188,7 +1410,11 @@ if(document.getElementById('Tmassv').value == 160 && document.getElementById('co
  
  
  if(document.getElementById('Tmassv').value == 0 && document.getElementById('conph').value == 220){//Ec=220v
-	 
+	
+	var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="0.5s";
+	wheel2.style["-webkit-animation-duration"] ="0.5s";
 	setTimeout(function(){
 		
 	document.getElementById('speed').value = '1028';
@@ -1196,7 +1422,11 @@ if(document.getElementById('Tmassv').value == 160 && document.getElementById('co
 	 
  }
  if(document.getElementById('Tmassv').value == 0 && document.getElementById('conph').value == 200){//Ec=200v
-	 
+	
+	var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="0.5s";
+	wheel2.style["-webkit-animation-duration"] ="0.5s";
 	setTimeout(function(){
 		
 	document.getElementById('speed').value = '1022';
@@ -1204,7 +1434,11 @@ if(document.getElementById('Tmassv').value == 160 && document.getElementById('co
 	 
  }
  if(document.getElementById('Tmassv').value == 0 && document.getElementById('conph').value == 180){//Ec=180v
-	 
+	
+	var wheel1 = document.getElementById("swheel");
+	var wheel2 = document.getElementById("bwheel");
+	wheel1.style["-webkit-animation-duration"] ="0.5s";
+	wheel2.style["-webkit-animation-duration"] ="0.5s";
 	setTimeout(function(){
 		
 	document.getElementById('speed').value = '1007';

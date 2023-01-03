@@ -199,7 +199,7 @@ jsPlumb.ready(function () {
 			e31 = prepare("bd31"),
 			e32 = prepare1("bd32"),
 			e33 = prepare2("bd33"),
-			e34 = prepare1("bd34"),
+			e34 = prepare3("bd34"),
 			e35 = prepare("bd35"),
 			e36 = prepare1("bd36"),
 			e37 = prepare1("bd37"),

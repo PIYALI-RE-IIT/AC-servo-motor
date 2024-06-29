@@ -1,91 +1,128 @@
 # Theory
-**Servomotors:**
+**Servomotors**
 
 Servomotors ( control motors) are motors which are designed and built for use in feedback control systems. 
 They have high speed of response and they are made for d.c. as well as for a.c. operation. These motors usually fractional horsepower motors having low efficiency.
 
 <div align="center">
 <img alt="" src="./images/ckt.png" style="width:400px;height:300px;">
+	
+<b>Fig. 1. Schematic representation of a Servomotor</b>
 </div>
 
-**Two-phase servomotors:**
+The two phase induction motor is used as a servomotor. This is because:<br/>
 
-An a.c. servomotor is an induction motor with two primary windings mutually displaced in magnetic position from one another by 90 electrical degrees.It has low inertia and high-resistance rotor, thus, giving a speed-torque curve that is linear in shape from no load speed to stand-still.
-It is designed for operation with a constant voltage applied to one of the windings , called the fixed phase , while a time-displaced adjustable voltage is impressed on the other winding which is called the control winding.
-The two phase induction motor is the most important machine which is used as a servomotor. This is because:
+1. No brushes and slip-rings are used. Thus, less maintenance is required and the motor is rugged and robust in construction.<br/>
 
-1- No brushes and slip-rings are used. Thus, less maintenance is required and the motor is rugged and robust in construction.
+2. The motor requires only a simple control amplifier.<br/><br/>
 
-2- The motor requires only a simple control amplifier.
-
-**Construction:**
+A schematic of the two-phase induction motor is shown in Fig. 2. The motor consists of a stator with two distributed windings displaced by 90 electrical degrees apart. Under normal operating conditions in control applications, a fixed voltage from a constant voltage source is applied to one phase called the fixed or the reference phase (<span style="font-family:'Times New Roman'">E<sub>ref</sub></span>). 
+The other phase is called the control phase, energized by a voltage (<span style="font-family:'Times New Roman'">E<sub>c</sub></span>) which is 90 degrees out of phase with respect to the voltage of the reference phase. The control phase voltage is usually supplied from a servo amplifier, the voltage has a variable amplitude and polarity. The direction of rotation of the motor reverses when the control phase signal Changes its sign. The rotor is squirrel cage or drag-cup type in structure.
 
 <div align="center">								
-<img class="center" alt="" src="./images/const.png" style="width:400px;height:300px;">
+<img class="center img-fluid" alt="" src="./images/2ph_IM.png" >
+	
+<b>Fig. 2. Schematic of a Two-Phase Induction Motor</b>
 </div>
 
-**Stator:**
+Unlike a dc motor the torque-speed curve of a two phase induction motor is quite nonlinear. Considering Fig 3, as the reference phase voltage is kept fixed,
+ the motor torque <i style="font-family:'Bodoni MT'">T<sub>m</sub></i> is a function of the speed and the control phase voltage and is represented by,
 
-The stator is similar to that of the split-phase induction motor. It has two windings called control winding and reference winding displaced by 90 electrical angle with each other.The two windings may be identical or not depending on the applications.
+$$T_m = f ( \dot{\theta} , E  ) \tag 1$$
 
-<div align="center">                
-<img  alt="" src="./images/rotor.png" style="width:400px;height:300px;">
-</div>
-
-**Rotor:**
-
-There are three different rotor types. The squirral cage rotor, the solid iron rotor and the drag cup rotor.The squirral-cage rotor is usually small in diameter to keep the mechanical inertia as low as possible and the rotor has high resistance in order to obtain linear speed-torque characteristics. The rotor winding is skewed in order to:
-
-1- make the motor run quietly by reducing the magnetic hum.
-
-2- reduce the locking tendency of the rotor, the tendency of the rotor teeth to remain under the stator teeth due to direct magnetic attraction between them.				
-								
-The drag-cup rotor consists of a cup of a nonmagnetic conducting material such as copper.
-This rotor is used for low output motors (few watts) in order to minimize the moment of inertia.
-The drag-cup rotor can be described as a special from of squirral-cage rotor in which the rotor teeth are removed,the rotor core is held stationary and the squirral cage bars and the end rings are replaced by a cylinderical cup.
+$$where, \ \dot{\theta} = \ speed , \  E = \ control \ phase \ voltage$$ 
 
 <div align="center">
-<img alt="" src="./images/eq1.png" style="width:400px;height:300px;">
-</div>	
-
- $$ Let \ us \ choose (\dot{\theta}_0,E_0) \ be \ the \ operating \ point \ of \ the \ ac \ motor \ and \ consequently \ expanding \ the \ function \ f(……) \ about \ this \ point \ we \ have $$
-
+<img alt="" src="./images/eq1.png" class="img-fluid"><br/>
+<b>Fig. 3. Speed-Torque characteristics of an ac Servomotor</b>
+</div><br/>	<br/>
 
 
-$$ T_{m}=T_{m0}+\frac{\partial{T_{m}}}{\partial{E}}\vert\dot{\theta}_{0}E_{0}(E-E_{0})+\frac{\partial{T_{m}}}{\partial{\dot{\theta}}}\vert\dot{\theta}_{0}E_{0}(\dot{\theta}-\dot{\theta}_{0}).......(1) $$   
+$$Let \ us \ choose \ (E_0,\dot{\theta}_0) \ be \ the \ operating \ point \ of \ the \ ac \ servomotor$$
+
+ 
+Expanding equation (1) about the operating point with Taylor series expansion we have,
+
+
+$$ T_m=T_{m0} + \frac{ \partial{T_m}}{ \partial{E}} \vert  \dot { \theta}_0 E_0 (E-E_0) + \frac{ \partial{T_m}}{ \partial{ \dot{ \theta}}}  \vert  \dot {\theta}_0 E_0 ( \dot{ \theta}- \dot{ \theta}_0) \tag 2 $$
+
 
 Where the higher order terms in the Taylor series expansion are neglected. Let
 
-J =	movement of inertia of rotor and disc
+<i style="font-family:'Bodoni MT'">J</i> = Moment of inertia of rotor and disc
 
-F 	=	coefficient of viscous friction
+<i style="font-family:'Bodoni MT'">f</i> = Coefficient of viscous friction
 
-$T_{L}$ 	= 	load torque 
+<i style="font-family:'Bodoni MT'">T<sub>L</sub></i> = Load torque
 
-$$ K = \frac{\partial{T_{m}}}{\partial{E}}\vert\dot{\theta}_{0}E_{0}\dot{\theta} $$
 
-$$ f_{0}=\frac{\partial{T_{m}}}{\partial{\dot{\theta}}}\vert\dot{\theta}_{0}E_{0} $$
+$$ K = \frac{ \partial{T_m}}{ \partial{E}} \vert \dot{ \theta}_0 E_0 \dot{ \theta} $$
+
+
+$$ f_0= \frac{ \partial{T_m}}{ \partial{ \dot{ \theta}}} \vert \dot{ \theta}_0 E_0 $$
 
 Then we can write the following equations 
 
-$$ T_{m0}=J\partial{\ddot{\theta}_{0}}+f\partial{\dot{\theta}_{0}}+T_{L}................(2) $$
 
-$$ T_{m}= J({\ddot{\theta}_{0}}+\Delta{\ddot{\theta}})+f({\dot{\theta}_{0}}+\Delta{\dot{\theta}})T_{L}.........(3) $$
+$$ T_{m0}=J  \ddot{ \theta}_0 + f \dot{ \theta}_0 + T_L \tag 3 $$
 
-In view of (1) – (3), the torque equation in incremental notation can be written as:
 
-$$ \Delta{T_{m}} =J\Delta{\ddot{\theta}}+ f\Delta{\dot{\theta}}=K\Delta{E}-f_{0}\Delta{\dot{\theta}} $$
+$$ T_m= J({ \ddot{ \theta}_0}+ \Delta{ \ddot{ \theta}})+f({ \dot{ \theta}_0} + \Delta{ \dot{ \theta}}) T_L \tag 4 $$
+
+
+In view of (2) – (4), the torque equation in incremental notation can be written as:
+
+$$ \Delta{T_{m}} =J\Delta{\ddot{\theta}}+ f\Delta{\dot{\theta}}=K\Delta{E}-f_{0}\Delta{\dot{\theta}} \tag{5}$$
 
 Hence, the incremental motor transfer function is:
 
-$$ G_{M}(s)=\frac{\theta(s)}{E(s)}=\frac{K}{S[Js+(f+f_{0})]} $$
+$$ G_{M}(s)=\frac{\theta(s)}{E(s)}=\frac{K}{S[Js+(f+f_{0})]} \tag{6}$$
 
-$$ =\frac{K_{m}}{s(T_{m}s+1)} $$
+$$ =\frac{K_{m}}{s(T_{m}s+1)} \tag{7}$$
 
 where,
 
-$$ K_{m}=\frac{K}{f+f_{0}}, T_{m}= \frac{J}{f+f_{0}} $$
+$$ K_m =\frac{K}{f+f_{0}}, T_m= \frac{J}{f+f_{0}} \tag{8}$$
 
-$$ k_{m}  = DC\ gain\ of\ the\ system ,\  T_{m} = Motor\ Time\ Constant $$	
+<i style="font-family:'Bodoni MT'">K<sub>m</sub></i>  = DC gain of the system,  <i style="font-family:'Bodoni MT'"><span style="font-size:18px;">&tau;</span><sub>m</sub></i> = Motor Time Constant
+
+$$K = \frac{Change \ in \ torque \ in \ N-m}{Change \ in \ control \ phase \ voltage \ E \ ( \ volt \ )} \ at \ constant \ speed \ in \ rad/sec$$
+
+$$f_0 = \frac{Change \ in \ torque \ in \ N-m}{Change \ in \ speed \ (  \ rad/sec \ )} \ at \ constant \ control \ phase \ voltage \ E \ ( \ volt \ )$$
+
+
+For linear analysis the torque – speed curves of a two phase induction motor are approximated by straight lines, as shown in Fig. 4.<br/> 
+
+<br/>
+<div align="center">
+<img alt="" src="./images/eq3.png" class="img-fluid"><br/>
+<b>Fig. 4. Linear analysis of the torque – speed curves of a two phase induction motor</b>
+</div><br/>
+
+
+<b>Calculation for <i style="font-family:'Bodoni MT'">K<sub>m</sub></i> and <i style="font-family:'Bodoni MT'">&tau;<sub>m</sub></i> from graph</b> 
+<br/>
+
+<div align="center">
+<img alt="" src="./images/fig5.png" class="img-fluid"><br/>
+<b>Fig. 5. Calculation for <i style="font-family:'Bodoni MT'">K<sub>m</sub></i> and <i style="font-family:'Bodoni MT'">&tau;<sub>m</sub></i></b>
+</div><br/>
+
+Choose an operating point from the torque vs. speed graph, obtained from experiment. Let us consider operating point as (<i style="font-family:'Times New Roman'">A</i> gm-cm, <i style="font-family:'Times New Roman'">B</i> rad/sec) in Fig. 5 for
+control phase voltage 180 V. <i style="font-family:'Times New Roman'">C</i> is the torque at constant speed <i style="font-family:'Times New Roman'">B</i> rad/sec for control voltage of 200 V.
+
+so,
+
+$$K = \frac{(C - A) \times (9.81 \times 10^{-5})}{(200 - 180)} \ N-m \ / \ volt \tag{9}$$
+
+Now consider a slope <i style="font-family:'Times New Roman'">AD</i> for constant control phase voltage 180 V. 
+<br/>Where <i style="font-family:'Times New Roman'">D</i> = torque (gm-cm) for speed <i style="font-family:'Times New Roman'">S</i> rad/sec. Hence,
+
+$$-f_0 = \frac{(D - A)\times (9.81 \times 10^-5)}{(S - B)} \ N-m \ / \ rad/sec \tag{10}$$
+
+ <span style="font-family:'Bodoni MT'"><i>f</i><sub>0</sub></span> is positive for a negative slope but it is negative for a positive slope.
+
+Calculate the value of <i style="font-family:'Bodoni MT'">K</i> and <span style="font-family:'Bodoni MT'"><i>f</i><sub>0</sub></span> from graph.
+
 						
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>								
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>							
